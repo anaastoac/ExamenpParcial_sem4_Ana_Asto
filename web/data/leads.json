@@ -1,0 +1,29 @@
+[
+  {
+    "id": "1782141312104-2lyf4th51",
+    "nombre": "Ana",
+    "email": "ana@gmail.com",
+    "empresa": "Esmeralda Corp S.A.C",
+    "telefono": "234 456 567",
+    "mensaje": "prueba",
+    "fecha": "2026-06-22T15:15:12.104Z"
+  },
+  {
+    "id": "1782141496337-m26kmbh1a",
+    "nombre": "Daniel Medina",
+    "email": "dmedina@gmail.com",
+    "empresa": "Esmeralda Corp S.A.C",
+    "telefono": "342 466 786",
+    "mensaje": "Prueba 2",
+    "fecha": "2026-06-22T15:18:16.337Z"
+  },
+  {
+    "id": "1782160657205-27rmpl7qf",
+    "nombre": "Marilu Asto",
+    "email": "marilu@gmail.com",
+    "empresa": "Esmeralda Corp S.A.C",
+    "telefono": "234 456 567",
+    "mensaje": "Prueba 5",
+    "fecha": "2026-06-22T20:37:37.205Z"
+  }
+]

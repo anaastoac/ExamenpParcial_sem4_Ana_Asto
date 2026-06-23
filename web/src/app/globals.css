@@ -1,0 +1,124 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --brand-blue: #1a73e8;
+  --brand-purple: #673ab7;
+  --brand-dark: #0a0a1a;
+  --brand-light: #f8f9fa;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background-color: var(--brand-dark);
+  color: #ffffff;
+}
+
+/* Custom animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes gradient-bg {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(26, 115, 232, 0.3); }
+  50% { box-shadow: 0 0 40px rgba(26, 115, 232, 0.6); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-glow {
+  animation: glow 3s ease-in-out infinite;
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #1a73e8 0%, #673ab7 50%, #1a73e8 100%);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradient-bg 4s ease infinite;
+}
+
+/* Glass effect */
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Button styles */
+.btn-primary {
+  @apply bg-brand-blue text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300;
+}
+
+.btn-primary:hover {
+  @apply shadow-lg;
+  box-shadow: 0 0 20px rgba(26, 115, 232, 0.5);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  @apply bg-transparent border-2 border-white text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300;
+}
+
+.btn-secondary:hover {
+  @apply bg-white text-brand-dark;
+  transform: translateY(-2px);
+}
+
+/* Card styles */
+.service-card {
+  @apply glass p-6 rounded-xl transition-all duration-300;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(26, 115, 232, 0.2);
+  border-color: rgba(26, 115, 232, 0.5);
+}
+
+/* Input styles */
+.input-field {
+  @apply w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-brand-blue transition-all duration-300;
+}
+
+.input-field:focus {
+  @apply border-brand-blue;
+  box-shadow: 0 0 0 3px rgba(26, 115, 232, 0.2);
+}
+
+/* Section styles */
+.section {
+  @apply py-20 px-4;
+}
+
+.section-title {
+  @apply text-4xl md:text-5xl font-bold mb-4;
+}
+
+.section-subtitle {
+  @apply text-xl text-gray-400 mb-12;
+}
